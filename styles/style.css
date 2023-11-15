@@ -203,10 +203,13 @@ ol {
   outline: none;
 }
 
-.search-form__label:focus-within {
+.search-form__label:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
+
+/* когда использую focus-visible вместо focus-within на проекте не срабатывает рамка вокруг элемента. 
+причем эта проблема возникает только для элемента search-form__label*/
 
 .search-form__checkbox-list {
   display: flex;
