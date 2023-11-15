@@ -177,7 +177,6 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
-
 }
 
 .search-form__fieldset-title {
@@ -200,12 +199,21 @@ ol {
   font-weight: 400;
   line-height: normal;
 }
+.search-form__label:focus {
+  outline: none;
+}
+
+.search-form__label:focus-within {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
 
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
   padding-top: 2px;
 }
+
 .search-form__pseudo-checkbox {
   display: flex;
   justify-content: center;
@@ -234,6 +242,15 @@ ol {
   appearance: none;
 }
 
+.search-form__textfield:focus{
+  outline: none;
+}
+.search-form__textfield:focus-visible{
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+/* Олег, спасибо!*/
+
 .search-form__checkbox:checked+.search-form__pseudo-checkbox::before {
   content: "";
   width: 15px;
@@ -243,15 +260,6 @@ ol {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.search-form__label:focus {
-  outline: none;
-}
-
-.search-form__label:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
 }
 
 .search-form__label:hover.search-form__label-text {
